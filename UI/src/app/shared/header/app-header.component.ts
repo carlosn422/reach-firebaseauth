@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ToggleService } from 'src/app/services/toggle.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ export class AppHeaderComponent {
 
   public observer1: any;
   public observer2: any;
-  constructor(private msgSer: ToggleService) { }
+  constructor(private msgSer: ToggleService, public authService: AuthService) { }
 
   ngOnInit() {
     this.observer1 = this.msgSer.escucharAccion1().subscribe(mensaje => {

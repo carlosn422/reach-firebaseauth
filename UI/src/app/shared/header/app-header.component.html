@@ -177,7 +177,9 @@
           <a class="dropdown-item"
              routerLink="/">
               <i class="mdi mdi-logout text-muted font-size-16 align-middle me-1"></i>
-              <span class="align-middle">Logout</span>
+              <span class="align-middle">
+                <a (click)="authService.SignOut()">Logout</a>
+              </span>
           </a>
         </div>
       </div>
