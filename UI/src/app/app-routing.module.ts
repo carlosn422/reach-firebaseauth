@@ -35,6 +35,7 @@ const routes: Routes = [
     path: 'reach',
     component: DashBoardComponent,
     pathMatch: 'full',
+    canActivate: [AuthGuard],
     children: [
       {
         path: '',
