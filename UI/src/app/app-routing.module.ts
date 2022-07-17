@@ -8,6 +8,8 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 
 // route guard
 import { AuthGuard } from './shared/guard/auth.guard';
+import { DashBoardComponent } from './templates/dashboard/dashboard.component';
+import { HomeDashBoardComponent } from './pages/dashboard/home/homedashboard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
@@ -16,6 +18,17 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
+  {
+    path: 'reach',
+    component: DashBoardComponent,
+    pathMatch: 'full',
+    children: [
+      {
+        path: '',
+        component: HomeDashBoardComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({

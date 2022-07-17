@@ -1,0 +1,40 @@
+<!-- cards -->
+  <div class="row d-flex flex-row justify-content-center align-items-center">
+    <div class="col-xl-8">
+      <div class="card">
+        <div class="card-body pb-2">
+          <div class="d-flex align-items-start mb-4 mb-xl-0">
+            <div class="flex-grow-1">
+              <h5 class="card-title">Enrollment Conference Form</h5>
+            </div>
+            <div class="flex-shrink-0">
+              <a class="btn" style="background: #72aebb ; color: white;" (click)="onSubmit()">
+                Submit Survey
+              </a>
+            </div>
+          </div>
+
+          <div class="survey row align-items-center">
+            <div class="row align-items-center">
+              <div class="col-xl-12">
+                <div class="card bg-light mb-0">
+                  <div class="card-body bg-light">
+                    <h5>Submiting survey as logged in user: Clark, Robert</h5>
+                    <form [formGroup]="form" >
+                      <formly-form class="overview" [form]="form" [fields]="fields" [model]="model"></formly-form>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+<!-- cards -->
+
+
