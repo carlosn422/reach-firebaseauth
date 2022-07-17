@@ -37,7 +37,7 @@ namespace WebApi.Controllers
         [Route("/[controller]/[action]")]
         public ActionResult GetUsers()
         {
-
+            var accessFireBaseUser = HttpContext.User.Claims.ToList();
             return Ok("User Returned");
 
         }
