@@ -31,10 +31,21 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./src/sass/bootstrap.scss",
+              "./src/sass/icons.scss",
+              "./src/sass/app.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./src/assets/libs/bootstrap/js/bootstrap.bundle.min.js",
+              "./src/assets/libs/feather-icons/feather.min.js",
+              "./src/assets/js/app.js"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/sass"
+              ]
+            }
           },
           "configurations": {
             "production": {

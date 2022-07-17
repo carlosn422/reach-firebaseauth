@@ -1,0 +1,12 @@
+<body data-layout="horizontal" data-topbar="dark">
+  <div id="layout-wrapper">
+    <app-header></app-header>
+    <div class="main-content">
+      <div class="page-content">
+        <div class="container-fluid" (window:scroll)="doSomethingOnWindowsScroll($event)">
+          <!-- <router-outlet></router-outlet> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

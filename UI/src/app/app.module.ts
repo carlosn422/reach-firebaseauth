@@ -21,16 +21,28 @@ import { AppRoutingModule } from './app-routing.module';
 
 // service
 import { AuthService } from './shared/services/auth.service';
+import { ServicesProvidedComponent } from './shared/servicesProvided/servicesProvided.component';
+import { HomeDashBoardComponent } from './pages/dashboard/home/homedashboard.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { AppHeaderComponent } from './shared/header/app-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
+    AppHeaderComponent,
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
+    ServicesProvidedComponent,
+    HomeDashBoardComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +52,12 @@ import { AuthService } from './shared/services/auth.service';
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    FormlyModule.forRoot(),
+    FormlyBootstrapModule,
+    CollapseModule,
+    BrowserAnimationsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],
