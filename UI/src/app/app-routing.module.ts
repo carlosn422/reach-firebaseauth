@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
@@ -10,9 +10,22 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 import { AuthGuard } from './shared/guard/auth.guard';
 import { DashBoardComponent } from './templates/dashboard/dashboard.component';
 import { HomeDashBoardComponent } from './pages/dashboard/home/homedashboard.component';
+import { MainComponent } from './templates/main/main.component';
+import { HomeLandingComponent } from './pages/landing/home/homelanding.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
+  { 
+    path: '', 
+    component: MainComponent,
+    pathMatch: 'full',
+    children: [
+      {
+        path: '',
+        component: HomeLandingComponent
+      }
+    ]
+  },
+  // { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
