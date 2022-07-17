@@ -33,7 +33,6 @@ export class AppHeaderComponent {
 
   ngOnDestroy() {
     this.observer1.unsubscribe();
-    this.observer2.unsubscribe();
   }
 
   collapse() {

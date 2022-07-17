@@ -14,7 +14,6 @@ export class DashBoardComponent {
 
   @HostListener("window:scroll", ['$event'])
 
-
   doSomethingOnWindowsScroll($event: Event) {
     var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
     if (st > 10){

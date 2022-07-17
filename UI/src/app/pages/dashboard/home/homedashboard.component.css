@@ -25,3 +25,7 @@ html {
   display: flex;
   flex-direction:row;
 }
+
+.overview ::ng-deep .form-group{
+  margin: 2em 0 2em 0em;
+}

@@ -8,7 +8,7 @@
               <h5 class="card-title">Enrollment Conference Form</h5>
             </div>
             <div class="flex-shrink-0">
-              <a class="btn btn-primary" (click)="onSubmit()">
+              <a class="btn" style="background: #72aebb ; color: white;" (click)="onSubmit()">
                 Submit Survey
               </a>
             </div>
@@ -21,7 +21,7 @@
                   <div class="card-body bg-light">
                     <h5>Submiting survey as logged in user: Clark, Robert</h5>
                     <form [formGroup]="form" >
-                      <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+                      <formly-form class="overview" [form]="form" [fields]="fields" [model]="model"></formly-form>
                     </form>
                   </div>
 

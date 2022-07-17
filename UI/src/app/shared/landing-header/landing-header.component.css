@@ -20,7 +20,3 @@ html {
 #page-topbar > div > div:nth-child(2) > div > button > span > span, .nav-item > a > span {
   font-size: 18px;
 }
-
-#page-topbar > div > div > div > a {
-  margin: 0px 0px 0px 10px;
-}
