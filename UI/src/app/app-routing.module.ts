@@ -12,6 +12,7 @@ import { DashBoardComponent } from './templates/dashboard/dashboard.component';
 import { HomeDashBoardComponent } from './pages/dashboard/home/homedashboard.component';
 import { MainComponent } from './templates/main/main.component';
 import { HomeLandingComponent } from './pages/landing/home/homelanding.component';
+import { SurveybuilderComponent } from './components/surveybuilder/surveybuilder.component';
 
 const routes: Routes = [
   { 
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
+  { path: 'survey-builder', component: SurveybuilderComponent },
   {
     path: 'reach',
     component: DashBoardComponent,
