@@ -37,9 +37,16 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 
+import { FormlyDesignerModule, FormlyDesignerService } from 'ngx-formly-designer';
+import { config, fieldComponents } from './config';
+import {designerConfig} from './designer-config';
+import { ExpanderComponent } from './components/expander.component';
+
 @NgModule({
   declarations: [
     AppComponent,
+    ExpanderComponent,
+    fieldComponents,
     MainComponent,
     DashBoardComponent,
     NavMenuComponent,
@@ -61,8 +68,9 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    FormlyModule.forRoot(),
+    FormlyModule.forRoot(config),
     FormlyBootstrapModule,
+    FormlyDesignerModule.forRoot(designerConfig),
     CollapseModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -75,6 +83,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     AuthService,
+    FormlyDesignerService,
   ],
   bootstrap: [AppComponent]
 })
