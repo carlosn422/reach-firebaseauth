@@ -41,6 +41,7 @@ import { FormlyDesignerModule, FormlyDesignerService } from 'ngx-formly-designer
 import { config, fieldComponents } from './config';
 import {designerConfig} from './designer-config';
 import { ExpanderComponent } from './components/expander.component';
+import { SurveybuilderComponent } from './components/surveybuilder/surveybuilder.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { ExpanderComponent } from './components/expander.component';
     SignUpComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
+    SurveybuilderComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

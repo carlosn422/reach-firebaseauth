@@ -11,7 +11,6 @@ export class HomeDashBoardComponent {
 
   form = new FormGroup({})
   options: FormlyFormOptions = {};
-  fields: FormlyFieldConfig[] = [];
 
   constructor(private fb: FormBuilder) {}
 
@@ -24,7 +23,7 @@ export class HomeDashBoardComponent {
     school_information:'',
     discussion_topics: ''
   }
-	fields2: FormlyFieldConfig[] = [
+	fields: FormlyFieldConfig[] = [
     {
       key: 'id',
       type: 'input',
